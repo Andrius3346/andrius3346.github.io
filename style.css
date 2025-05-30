@@ -1,0 +1,261 @@
+html, body, div {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 24px;
+  color: white;
+}
+
+body {
+  padding: 0 200px;
+  background-color: black;
+}
+
+header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 520px;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  position: sticky;
+  align-self: start;
+  top: 0;
+  z-index: 1;
+}
+
+.title h1 {
+  text-align: center;
+  text-wrap: nowrap;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.navigation-elements {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 90px
+}
+
+.navigation-elements a {
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes rainbow {
+  0% { color: #ff0000; }
+  17% { color: #ff00ff; }
+  33% { color: #0000ff; }
+  50% { color: #00ffff; }
+  67% { color: #00ff00; }
+  83% { color: #ffff00; }
+  100% { color: #ff0000; }
+}
+
+.navigation-elements a:hover {
+  animation: rainbow 0.25s linear infinite;
+  text-decoration: underline
+}
+
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh; /* Changed from calc(100vh - 200px) to 50vh for half viewport height */
+  height: auto; /* Allow content to determine height if larger than min-height */
+  padding: 50px 0;
+}
+
+.intro-section h2 {
+  display: flex;/* Added to enable vertical centering */
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  text-align: justify;
+  height: text;
+  max-width: 500px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 0 auto; /* Center the text block horizontally */
+  max-height: 100%; /* Ensure text doesn't overflow container */
+  overflow-y: auto; /* Add scrolling if content is too long */
+}
+
+.section-container {
+  display: flex;
+  border-style: solid none none none;
+  padding: 50px 0;
+}
+
+.map-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;  /* Added to ensure full width */
+}
+
+.map-item {
+  flex: 0 1 495px;  /* Changed from flex: 1 to prevent extending */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 495px;    /* Fixed width matching the image dimensions */
+}
+
+.map-item:hover {
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.map-title {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0px 0px 20px 0px;
+  text-align: left;         /* Already set to left */
+  align-self: flex-start;   /* Added to ensure left alignment within flex container */
+  width: 100%;             /* Added to ensure full width */
+  text-wrap: nowrap;
+  color: white;
+}
+
+.map-image {
+  width: 100%;  /* Changed from fixed 495px to 100% */
+  max-width: 495px;  /* Added max-width to maintain reasonable size */
+  height: 495px;
+  object-fit: cover;
+  align-self: flex-start;
+}
+
+.footer-content {
+  border-style: solid none none none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  gap: 180px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  animation: rainbow 0.25s linear infinite;
+  text-decoration: underline;
+}
+
+.aboutme-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-height: 25vh; /* Changed from calc(100vh - 200px) to 50vh for half viewport height */
+  height: auto; /* Allow content to determine height if larger than min-height */
+  padding: 50px 0;
+}
+
+.contact-form {
+  font-size: 24px;
+  font-weight: normal;
+  max-width: 755px;
+  margin: 0;  /* Remove auto margins */
+  align-self: flex-start;  /* Align to start of flex container */
+  text-align: left;  /* Align text to left */
+}
+
+iframe {
+  width: 755px;
+  height: 655px;
+  border: none;
+  box-shadow: none;
+}
+
+.contact-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-style: solid none none none;  /* Only top and bottom borders */
+  border-color: white;
+  padding: 50px 0;
+}
+
+.mapshowcase-container {
+  align-items: center; /* Centers content vertically */
+  justify-content: center; /* Centers content horizontally */
+  text-align: justify;
+  height: text;
+  border-style: solid none none none;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.mapshowcase-container h2 {
+  margin: 0 0 20px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.mapshowcase-container p {
+  font-size: 22px;
+  margin: 20px 0 50px 0;
+}
+
+.map-container-frame {
+  width: 100%;
+  height: 800px;
+  margin:0;
+}
+
+@media (max-width: 1853px) {
+  header {
+    background-color: black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: sticky;
+    align-self: start;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 430px) {
+  body {
+    padding: 0 10px;
+  }
+  
+  .title h1 {
+    font-size: 24px;
+  }
+
+  .navigation {
+    column-gap: 1px;
+  }
+    
+  .navigation-elements {
+    font-size: 12px;
+    column-gap: 9px
+  }
+
+  .intro-section {
+    min-height: 30vh; /* Smaller height on mobile */
+  }
+
+  .intro-section h2 {
+    font-size: 12px;
+    width: 100%;
+    max-width: 350px;
+  }
+}
