@@ -1,6 +1,8 @@
-html, body, div {
+html,
+body,
+div {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: 24px;
@@ -16,7 +18,6 @@ header {
   background-color: black;
   display: flex;
   justify-content: space-between;
-  column-gap: 520px;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
@@ -46,13 +47,33 @@ header {
 }
 
 @keyframes rainbow {
-  0% { color: #ff0000; }
-  17% { color: #ff00ff; }
-  33% { color: #0000ff; }
-  50% { color: #00ffff; }
-  67% { color: #00ff00; }
-  83% { color: #ffff00; }
-  100% { color: #ff0000; }
+  0% {
+    color: #ff0000;
+  }
+
+  17% {
+    color: #ff00ff;
+  }
+
+  33% {
+    color: #0000ff;
+  }
+
+  50% {
+    color: #00ffff;
+  }
+
+  67% {
+    color: #00ff00;
+  }
+
+  83% {
+    color: #ffff00;
+  }
+
+  100% {
+    color: #ff0000;
+  }
 }
 
 .navigation-elements a:hover {
@@ -64,24 +85,23 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 30vh; /* Changed from calc(100vh - 200px) to 50vh for half viewport height */
-  height: auto; /* Allow content to determine height if larger than min-height */
+  min-height: 30vh;
+  height: auto;
   padding: 50px 0;
 }
 
 .intro-section h2 {
-  display: flex;/* Added to enable vertical centering */
-  align-items: center; /* Centers content vertically */
-  justify-content: center; /* Centers content horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: justify;
   height: text;
   max-width: 500px;
   font-size: 24px;
   font-weight: normal;
-  line-height: 1.5;
-  margin: 0 auto; /* Center the text block horizontally */
-  max-height: 100%; /* Ensure text doesn't overflow container */
-  overflow-y: auto; /* Add scrolling if content is too long */
+  margin: 0 auto;
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 .section-container {
@@ -95,39 +115,38 @@ header {
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
-  width: 100%;  /* Added to ensure full width */
+  width: 100%;
 }
 
 .map-item {
-  flex: 0 1 495px;  /* Changed from flex: 1 to prevent extending */
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  width: 495px;    /* Fixed width matching the image dimensions */
-}
-
-.map-item:hover {
-  transform: scale(0.95);
-  transition: transform 0.3s ease;
+  width: 495px
 }
 
 .map-title {
   font-size: 24px;
   font-weight: normal;
   margin: 0px 0px 20px 0px;
-  text-align: left;         /* Already set to left */
-  align-self: flex-start;   /* Added to ensure left alignment within flex container */
-  width: 100%;             /* Added to ensure full width */
+  text-align: left;
+  align-self: flex-start;
+  width: 100%;
   text-wrap: nowrap;
   color: white;
 }
 
 .map-image {
-  width: 100%;  /* Changed from fixed 495px to 100% */
-  max-width: 495px;  /* Added max-width to maintain reasonable size */
-  height: 495px;
+  width: 100%;
+  height: 500px;
   object-fit: cover;
   align-self: flex-start;
+}
+
+.map-image:hover {
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
 }
 
 .footer-content {
@@ -154,23 +173,29 @@ header {
   text-decoration: underline;
 }
 
-.aboutme-section {
+.contact-form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  min-height: 25vh; /* Changed from calc(100vh - 200px) to 50vh for half viewport height */
-  height: auto; /* Allow content to determine height if larger than min-height */
+  min-height: 25vh;
+  height: auto;
   padding: 50px 0;
 }
 
-.contact-form {
+.aboutme-section {
   font-size: 24px;
   font-weight: normal;
   max-width: 755px;
-  margin: 0;  /* Remove auto margins */
-  align-self: flex-start;  /* Align to start of flex container */
-  text-align: left;  /* Align text to left */
+  margin: 0;
+  align-self: flex-start;
+  text-align: left;
+}
+
+.aboutme-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
 }
 
 iframe {
@@ -184,14 +209,14 @@ iframe {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-style: solid none none none;  /* Only top and bottom borders */
+  border-style: solid none none none;
   border-color: white;
   padding: 50px 0;
 }
 
 .mapshowcase-container {
-  align-items: center; /* Centers content vertically */
-  justify-content: center; /* Centers content horizontally */
+  align-items: center;
+  justify-content: center;
   text-align: justify;
   height: text;
   border-style: solid none none none;
@@ -213,29 +238,19 @@ iframe {
 .map-container-frame {
   width: 100%;
   height: 800px;
-  margin:0;
+  margin: 0;
 }
 
-@media (max-width: 1853px) {
-  header {
-    background-color: black;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: sticky;
-    align-self: start;
-    top: 0;
-    z-index: 1;
-  }
-}
-
-/* Mobile breakpoint */
 @media (max-width: 430px) {
   body {
     padding: 0 10px;
   }
-  
+
+  header {
+    justify-content: center;
+  }
+
+  /* Header adjustments for mobile */
   .title h1 {
     font-size: 24px;
   }
@@ -243,19 +258,107 @@ iframe {
   .navigation {
     column-gap: 1px;
   }
-    
+
   .navigation-elements {
     font-size: 12px;
     column-gap: 9px
   }
 
+  /* Section adjustments for mobile */
   .intro-section {
-    min-height: 30vh; /* Smaller height on mobile */
+    min-height: 10vh;
   }
 
   .intro-section h2 {
     font-size: 12px;
     width: 100%;
     max-width: 350px;
+  }
+
+  .section-container {
+    padding: 20px 0 20px 0;
+  }
+
+  .map-title {
+    font-size: 12px;
+  }
+
+  .map-image {
+    height: 250px;
+  }
+
+  /* Footer adjustments for mobile */
+  .footer-content {
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .footer-links {
+    font-size: 12px;
+    gap: 50px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+
+  /*Map showcase adjustments for mobile */
+  .mapshowcase-container {
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    height: text;
+    border-style: solid none none none;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .mapshowcase-container h2 {
+    margin: 0 0 20px 0;
+    font-size: 12px;
+  }
+
+  .mapshowcase-container p {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 20px 0 20px 0;
+  }
+
+  .map-container-frame {
+    height: 600px;
+  }
+
+  /*about me section adjustments for mobile */
+  .aboutme-section {
+    font-size: 12px;
+    text-align: justify;
+  }
+
+  .aboutme-section h2 {
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+    margin: 50px 0 50px 0;
+  }
+
+  .aboutme-section p {
+    font-size: 12px;
+  }
+
+  .contact-form  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 0 20px;
+  }
+
+  .contact-form iframe {
+    width: 100%;
+  }
+
+  /* Contact form adjustments for mobile */
+  .contact-footer-content {
+    padding: 20px 0;
   }
 }
